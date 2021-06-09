@@ -2155,8 +2155,8 @@ struct entityState_s
   int solid;
   int eventParm;
   int eventSequence;
-  vec4_t events;
-  vec4_t eventParms;
+  int events[4];
+  int eventParms[4];
   int weapon;
   int legsAnim;
   int torsoAnim;
@@ -2521,7 +2521,7 @@ struct playerState_s
   int eFlags;
   int eventSequence;
   int events[4];
-  unsigned int eventParms[4];
+  int eventParms[4];
   int oldEventSequence;
   int clientNum;
   int offHandIndex;
