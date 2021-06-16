@@ -4857,3 +4857,39 @@ struct loopback_t
   int send;
 };
 
+/* 484 */
+#pragma pack(push, 8)
+struct qfile_gus
+{
+  FILE *o;
+  voidp z;
+};
+#pragma pack(pop)
+
+/* 485 */
+#pragma pack(push, 8)
+struct qfile_us
+{
+  qfile_gus file;
+  qboolean unique;
+};
+#pragma pack(pop)
+
+/* 486 */
+#pragma pack(push, 8)
+struct fileHandleData_t
+{
+  qfile_us handleFiles;
+  qboolean handleSync;
+  int fileSize;
+  int zipFilePos;
+  qboolean zipFile;
+  qboolean streamed;
+  char name[256];
+  void *writebuffer;
+  int bufferSize;
+  int bufferPos;
+  int rbufferPos;
+};
+#pragma pack(pop)
+
